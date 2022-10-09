@@ -43,20 +43,21 @@
         let nextNode = document.getElementById("next");
 
         let arrayGambar = [
-            "gambar0.jpg", "gambar1.jpg", "gambar2.jpg", "gambar3.jpg", "gambar4.jpg"
+            "gambar0.jpg", "gambar1.jpg", "gambar2.jpg", "gambar3.jpg","gambar4.jpg", "gambar5.jpg"
         ];
         let arrayLink = [
             "https://www.google.com",
             "https://www.twitter.com",
             "https://www.facebook.com",
             "https://www.bing.com",
-            "https://www.duniailkom.com"
+            "https://www.duniailkom.com",
+            "https://www.youtube.com"
         ];
         let counter = 0;
 
         const nextSlideshow = () => {
             counter++;
-            if (counter === 5){
+            if (counter === 6){
                 counter = 0;
             }
             slideshowNode.setAttribute("src", arrayGambar[counter]);
@@ -67,7 +68,7 @@
         const prevSlideshow = () => {
             counter--;
             if (counter === -1){
-                counter = 4;
+                counter = 5;
             }
             slideshowNode.setAttribute("src", arrayGambar[counter]);
             linkshowNode.setAttribute("href", arrayLink[counter]);
